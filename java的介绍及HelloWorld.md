@@ -60,3 +60,198 @@ Java是一种强类型的语言，包括八种基本类型，列表如下：
 | byte  | 1字节    | -128 ~ 127                                             |
 |       |          |                                                        |
 
+### 浮点类型
+
+| 类型   | 存储需求 | 取值范围                                             |
+| ------ | -------- | ---------------------------------------------------- |
+| float  | 4字节    | 大约±3.402 823 47E + 38F(有效位数为6~7位)            |
+| double | 8字节    | 大约±1.797 693 134 862 315 70E + 308(有效位数为15位) |
+
+float类型的数值有一个后缀F。没有F的浮点数值默认为double类型
+
+
+
+### char类型
+
+不建议使用char类型
+
+
+
+### boolean类型
+
+boolean（布尔）类型有两个值：false和true
+
+>  在C++中，整数0相当于布尔值false，非0值相当于布尔值true，在java中则不行
+
+
+
+### 变量
+
+声明变量以及变量初始化：
+
+```java
+double salary;
+int vacationDays;
+long earthPopulation;
+boolean done;
+```
+
+```java
+int i = 10;
+```
+
+
+
+### 常量
+
+java中，利用`final`声明常量，常量一般大写
+
+```java
+final PAI = 3.14159;
+```
+
+
+
+### 运算符
+
+与C语言基本相同
+
+
+
+### 位运算符
+
+与C语言基本相同
+
+
+
+### 数学函数与变量
+
+Java在Math类中，包含了各种各样的数学函数，我们需要使用时，在程序顶部加上
+
+```java
+import static java.lang.Math.*;
+```
+
+简单列举如下：
+
+* 乘方开方
+  * sqrt(x)——给x开根号
+  * pow(x, a)——求x的a次幂
+* 三角函数
+  * sin(a)
+  * cos(a)
+  * tan(a)
+* 常量
+  * PI
+  * E
+
+
+
+### 强制类型转换
+
+与C语言类似
+
+
+
+### 括号与运算符
+
+与C语言类似
+
+
+
+### 枚举
+
+与C语言类似
+
+
+
+### 字符串
+
+标准的Java类库中有String类型
+
+**Java字符串必须时双引号，否则会报错**
+
+#### 子串`substring`，左闭右开
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = str1.substring(0,3);
+        System.out.println(str2);
+  	}
+}
+```
+
+和js中的substring()很像，不过这种情况js我们大部分用slice
+
+
+
+#### 拼接
+
+直接写 + 号
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        System.out.println(str1 + str2);
+    }
+}
+```
+
+#### 检查字符串是否相等equals
+
+返回值时true或者false
+
+**一定不能用==来检查两个字符串是否相等**
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        System.out.println(str1.equals(str2));
+    }
+}
+```
+
+### charAt()
+
+和js类似
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1.charAt(1));
+    }
+}
+```
+
+#### length()
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1.length());
+    }
+}
+```
+
+### codePointAt()
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1.codePointAt(0));    
+        //输出H的ASCIIA码
+    }
+}
+
+```
+
+Int 
