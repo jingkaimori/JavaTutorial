@@ -371,6 +371,28 @@ public class FirstSample {
 
 ## String replace(CharSequence oldString, CharSequence newString)
 
+返回一个新字符串，这个新字符串中所有的oldString都会被newString所代替，其中可以用String和StringBuilder作为CharSequence的参数
+
+
+
+## String toLowerCase()
+
+返回一个新字符串，这个字符串将所有的大写字母变为小写字母
+
+
+
+## String toUpperCase()
+
+返回一个新字符串，这个字符串将所有的小写字母变为大写字母
+
+
+
+## String trim()
+
+返回一个新字符串，这个新字符串删除了原始字符串开头和结尾的空格
+
+
+
 
 
 
