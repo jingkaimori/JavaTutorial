@@ -217,7 +217,7 @@ public class FirstSample {
 }
 ```
 
-### charAt()
+charAt()
 
 和js类似
 
@@ -241,7 +241,7 @@ public class FirstSample {
 }
 ```
 
-### codePointAt()
+codePointAt()
 
 ```java
 public class FirstSample {
@@ -254,4 +254,124 @@ public class FirstSample {
 
 ```
 
-Int 
+## 字符串的API
+
+## char charAt(int index)
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1.charAt(0));
+    }
+}
+
+//输出H
+```
+
+
+
+## int codePointAt(int index)
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        System.out.println(str1.codePointAt(0));
+    }
+}
+
+//输出H的ASCIIA码
+```
+
+
+
+## int offsetByCodePoints(int startIndex, int cpCount)
+
+
+
+//前三个和代码点预计代码单元有关系，之后再细看
+
+
+
+## int compareTo(String other)
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "banana";
+        System.out.println(str1.compareTo("apple"));    //banana大于apple，返回一个正数
+        System.out.println(str1.compareTo("car"));      //banana小于car，返回一个负数
+        System.out.println(str1.compareTo("banana"));   //相同字符串，返回0
+    }
+}
+
+```
+
+有点类似于C语言的`strcmp`函数，C语言的`strcmp(str1, str2)`，str1 > str2 返回正， str1 < str2 返回负，str1 = str2 返回0
+
+可以把java中的str1.compareTo(str2)
+
+## boolean endWith(String suffix)
+
+```java
+public class FirstSample {
+    public static void main(String[] args) {
+        String str1 = "banana";
+        System.out.println(str1.endsWith("na"));    //以na结尾，返回true
+        System.out.println(str1.endsWith("ba"));    //否则，返回false
+    }
+}
+
+```
+
+
+
+## boolean equals(Object other)
+
+如果字符串与other相等，返回true，否则返回false
+
+
+
+## boolean equalgnoreCase(String other)
+
+忽略大小写，如果相等返回true，否咋返回false
+
+
+
+## int IndexOf(String str)
+
+## int IndexOf(String str, int fromIndex)
+
+## int IndexOf(int cp)
+
+## int IndexOf(int cp, int fromIndex)
+
+返回与字符串str或代码点cp匹配的第一个字串开始的位置。这个位置从索引0或fromIndex开始计算。如果在原始串中不存在str，返回-1
+
+
+
+## int lastIndexOf(String str)
+
+## int lastIndexOf(String str, int fromIndex)
+
+## int lastIndexOf(int cp)
+
+## int lastIndexOf(int cp, int fromIndex)
+
+返回与字符串str和代码点匹配的最后字串的开始位置。这个位置从原始字符串的末尾或fromIndex开始计算
+
+
+
+## int length()
+
+返回与字符串的长度
+
+## int codePointCount(int startIndex, int endIndex)
+
+## String replace(CharSequence oldString, CharSequence newString)
+
+
+
+
+
