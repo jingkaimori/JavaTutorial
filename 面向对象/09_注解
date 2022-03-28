@@ -1,0 +1,101 @@
+# 注解
+
+注解，是Java语言的一种高级特性。
+
+之前的课程中讲过，可以用`public`关键字来控制一个字段能否被其他方法访问。在Java语言中，还有另外一些关键字来控制数据的并发特性。
+添加这些关键字的时候，不需要更改原有的定义，只需要添加相应的保留字。如果运行环境多一项功能，就要划定几个关键字，可想而知最后会有多少不能用作变量名的保留字。
+因此，Java语言开放了注解功能
+
+Spring 框架会识别预先定义的注解，通过注解来扩展 Java 语言，比如识别 HTTP 绑定。
+
+以下是注解的示例：
+
+```java
+public @interface myAnnotation {
+  String[] stringlist;
+  SubAnnotation subAnno;
+}
+
+public @interface SubAnnotation {
+  int value;
+}
+
+@myAnnotation
+public class Application {
+  
+  Application(){
+  
+  }
+  
+  run(String name){
+    System.out.println(name + "run");
+  }
+}
+```
+
+## 注解的结构
+
+注解只能接受一系列字段，而字段的类型可以为以下类型之一：
+* 字符串、整数、浮点数等具有字面量的类型（原始类型）
+* 类对象`SomeClass.class`
+* 原始类型构成的数组
+  * 只能定义一维数组
+  * 数组必须为原生类型`String[]`，不可以用`List<String>`代替
+* 其他注解
+
+## 使用注解
+
+
+如果注解没有参数，只用注解名就可以调用注解
+```java
+@TagAnnotation
+interface Race{
+  
+}
+```
+
+```java
+@myAnnotation(
+  stringlist = {"bit","nku","buaa"},
+  subAnno = @SubAnnotation("tju")
+)
+interface University{
+
+}
+```
+
+```java
+@SubAnnotation("demo")
+interface Suburb{
+
+}
+```
+
+### 注解的位置和 Target 元注解
+
+注解只能依附在以下的位置：
+| 注解的位置 | Target |
+| :-------: | :----: |
+| 其他注解 | ANNOTATION |
+| 构造函数 | CONSTRUCTOR |
+| 字段 | FIELD |
+| 局部变量 | LOCAL_VARIABLE |
+| 方法 | METHOD |
+| 包 | PACKAGE |
+| 方法或构造函数的参数 | PARAMETER |
+| 类定义，接口定义 | TYPE |
+| 泛型的类型参数 | TYPE_PARAMETER |
+|  | TYPE_USE |
+
+
+### 包注解
+
+包注解只能在`package`语句下定义
+
+```java
+@PackageAnno package cn.edu
+```
+
+## 注解保留策略和 RententionPolicy 元注解
+
+## 注解与 AOP
