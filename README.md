@@ -4,7 +4,7 @@
 
 看实际花费的时间扩大覆盖数据库的分公司。
 
-感谢 @lijunlin2022 学长。
+感谢 @lijunlin2022 学长。仓库的地址在[https://github.com/jingkaimori/javaTutorial](https://github.com/jingkaimori/javaTutorial)
 
 ## 目录
 1. 开发环境
