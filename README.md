@@ -11,9 +11,13 @@
     1. [搭建开发环境](./开发环境/开发环境.md)
     2. 编译并运行Java代码（暂缺）
 2. 基础语法
-    1. [数据类型](./基础语法/01_数据类型.md)
+    1. [表达式与函数](./基础语法/02_表达式与函数.md)
+        1. 嵌套的函数调用（暂缺）
+        2. 函数定义（暂缺）
+        3. 常用表达式
+        4. 内置数值函数
+    2. [数据类型](./基础语法/01_数据类型.md)
         1. [字符串](./基础语法/03_字符串.md)
-    2. 表达式与方法调用（暂缺）
     3. [控制流程](./基础语法/04_控制流程.md)
         1. 中断控制语句——break case;
         2. for each循环
@@ -30,11 +34,15 @@
             2. private
         6. JavaBean类
     2. [异常](./类型与对象/04_异常.md)
+        1. throw与AutoClosable（暂缺）
+        2. throw与Throwable（暂缺）
     3. [泛型](./类型与对象/08_泛型.md)
         1. 用泛型定义列表、集合和字典
         2. for each 遍历列表
     4. [注解](./类型与对象/09_注解.md)
-    5. 函数表达式（暂缺）
+    5. 函子（函数表达式）（暂缺）
+    6. 迭代器（暂缺）
+        1. for each 遍历列表
 4. [面向对象](./面向对象/01_什么是面向对象.md)
     1. [继承](./面向对象/03_继承.md)
     2. [抽象类](./面向对象/06_抽象类.md)
@@ -58,10 +66,84 @@
 8. Java还缺什么
     1. 全局变量（暂缺）
     2. 对象的序列化（暂缺）
-9. SQL语言
-10. 后续（暂缺）
+9. 其他技术 
+    1. [SQL语言](./数据库基本知识/SQL.md)
     1. JDBC 操作数据库
     2. AOP 面向切面编程
     3. Jackson 或 gson 以JSON格式转换对象
     4. Lombok 封装对象
     5. lwjgl 3D视频库
+
+## 学习顺序
+
+```mermaid
+flowchart LR
+
+    classDef default fill:#fef;
+    classDef important fill:#cff;
+
+    env[搭建开发环境]
+    1stprog[第一个Java程序]
+    function[用函数来组织代码]
+    expression[表达式和算术运算]
+    datatype[数据类型和类型规则]
+    string[字符串]
+    arbitarynum[任意精度数值]
+    array[方括号数组]
+    io[命令行输入输出]
+    ctrlflow[控制流]
+    classObj[对象定义]
+    import[导入语句]
+    exception[异常处理]
+    generic[泛型]
+    annotation[注解]
+    oo[面向对象基本概念]
+    inhertance[继承]
+    polymorphism[多态]
+    interface[接口]
+    abstractClass[抽象类]
+    functor[函子]
+    customException[定义异常类型]
+    autoClose[处理资源异常]
+    customAutoClose[自定义可关闭的资源]
+    iterate[迭代与集合]
+    reflect[反射]
+
+    env --> 1stprog
+    1stprog --> function
+    function --> expression
+    function --> ctrlflow
+    1stprog --> expression
+    expression --> datatype
+    expression --> string
+    expression --> arbitarynum
+    expression --> array
+    datatype --> exception
+    ctrlflow --> exception
+    datatype --> classObj
+    function --> classObj
+    expression --> classObj
+    string --> io
+    function --> import
+    annotation --> reflect
+    classObj --> reflect
+    datatype --> generic
+    generic --> iterate
+    classObj --> iterate
+    function --> annotation
+    classObj --> annotation
+    classObj --> oo
+    function --> oo
+    oo --> inhertance
+    classObj --> abstractClass
+    abstractClass --> interface
+    classObj --> interface
+    function --> polymorphism
+    datatype --> polymorphism
+    function --> functor
+    interface --> functor
+    exception --> customException
+    exception --> autoClose
+    autoClose --> customAutoClose
+    class 1stprog,function,expression,datatype,ctrlflow,classObj,exception,generic,interface,functor,iterate important;
+```
