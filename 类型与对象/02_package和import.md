@@ -13,19 +13,19 @@ using namespace std;
 
 namespace A {
     int age = 18;
-    string sex = "male"; 
+    string gender = "male"; 
 }
 
 namespace B {
     int age = 20;
-    string sex = "female";
+    string gender = "female";
 }
 
 int main() {
     cout << "-----A-----" << endl;
-    cout << A::age << " " << A::sex << endl;
+    cout << A::age << " " << A::gender << endl;
     cout << "-----B-----" << endl;
-    cout << B::age << " " << B::sex << endl;
+    cout << B::age << " " << B::gender << endl;
     return 0;
 }
 ```
@@ -171,7 +171,7 @@ public class Main {
         B_1 b = new B_1();
         C_1 c = new C_1();	//C_1位于无名包，与Main同目录,自动导入
         System.out.println(a.age);
-        System.out.println(b.sex);
+        System.out.println(b.gender);
         System.out.println(c.name);
     }
 }
