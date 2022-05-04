@@ -1,5 +1,5 @@
 ---
-mermaid:true
+mermaid: true
 ---
 # JAVA 讲义
 
