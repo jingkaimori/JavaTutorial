@@ -79,7 +79,7 @@ mermaid: true
 
 ## 学习顺序
 
-```mermaid
+<div class="mermaid">
 flowchart LR
 
     classDef default fill:#fef;
@@ -149,4 +149,4 @@ flowchart LR
     exception --> autoClose
     autoClose --> customAutoClose
     class 1stprog,function,expression,datatype,ctrlflow,classObj,exception,generic,interface,functor,iterate important;
-```
+</div>
