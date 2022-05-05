@@ -17,13 +17,25 @@ window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
 {% endif %}
 
 {% if page.math %}
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-        }
-    });
+<script>
+  window.MathJax = {
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    tex: {
+      inlineMath: [['\\(','\\)']],
+      autoload: {
+        color: [],
+        colorv2: ['color']
+      },
+      packages: {'[+]': ['noerrors']}
+    },
+    loader: {
+      load: ['[tex]/noerrors']
+    }
+  };
 </script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 {% endif %}
