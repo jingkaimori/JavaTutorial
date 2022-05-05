@@ -2,7 +2,6 @@
 <script type="text/javascript"
 src="https://cdn.jsdelivr.net/npm/mermaid@9.0.1/dist/mermaid.min.js">
 </script>
-
 <script>
 var config = {
   startOnLoad: true,
@@ -14,5 +13,17 @@ var config = {
 };
 mermaid.initialize(config);
 window.mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+</script>
+{% endif %}
+
+{% if page.math %}
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+        }
+    });
 </script>
 {% endif %}
