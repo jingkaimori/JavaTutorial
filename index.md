@@ -38,8 +38,8 @@ mermaid: true
             3. JavaBean类
     2. [类型规则与接口](./类型与对象/03_接口.md)
     3. [异常](./类型与对象/04_异常.md)
-        1. throw与AutoClosable（暂缺）
-        2. throw与Throwable（暂缺）
+        1. throw与AutoClosable
+        2. throw与Throwable
     4. [泛型](./类型与对象/08_泛型.md)
         1. 用泛型定义列表、集合和字典
         2. for each 遍历列表
@@ -67,6 +67,7 @@ mermaid: true
 7. Java的内置操作（暂缺）
     1. 文件读写
     2. 反射编程
+    3. 垃圾回收
 8. Java还缺什么
     1. 全局变量（暂缺）
     2. 对象的序列化（暂缺）
