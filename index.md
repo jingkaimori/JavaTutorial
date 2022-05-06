@@ -127,6 +127,8 @@ flowchart LR
     datatype --> classObj
     function --> classObj
     expression --> classObj
+    function --> staticMember
+    classObj --> staticMember
     string --> io
     function --> import
     annotation --> reflect
