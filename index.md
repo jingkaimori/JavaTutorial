@@ -31,11 +31,11 @@ mermaid: true
         1. 构造器（构造函数）
         2. this关键字
         3. [包 package](./类型与对象/02_package和import.md)
-        4. 静态成员 static
+        4. [类的静态成员](./类型与对象/05_类的静态成员.md)
         5. 访问控制
             1. public
             2. private
-        6. JavaBean类
+            3. JavaBean类
     2. [异常](./类型与对象/04_异常.md)
         1. throw与AutoClosable（暂缺）
         2. throw与Throwable（暂缺）
@@ -96,6 +96,7 @@ flowchart LR
     io[命令行输入输出]
     ctrlflow[控制流]
     classObj[对象定义]
+    staticMember[类的静态成员]
     import[导入语句]
     exception[异常处理]
     generic[泛型]
@@ -139,7 +140,7 @@ flowchart LR
     function --> oo
     oo --> inhertance
     classObj --> abstractClass
-    abstractClass --> interface
+    abstractClass -.-> interface
     classObj --> interface
     function --> polymorphism
     datatype --> polymorphism
