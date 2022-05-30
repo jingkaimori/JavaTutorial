@@ -3,11 +3,11 @@ mermaid: true
 ---
 # JAVA 讲义
 
-创建一个仓库用来储存讲课的讲稿和代码。该讲义假设读者完成了C语言的学习。
+该仓库储存北理移动政务实验室JAVA培训的讲稿和代码，以及数据库的相关内容。该讲义假设读者完成了C语言的学习。感谢 @lijunlin2022 学长。
 
-看实际花费的时间扩大覆盖数据库的分公司。
+如有不足之处，请各位读者指出。可通过Issue或[邮箱](mailto:jingkaimori@gmail.com)发送留言。
 
-感谢 @lijunlin2022 学长。仓库的地址在[https://github.com/jingkaimori/javaTutorial](https://github.com/jingkaimori/javaTutorial)
+仓库的地址在[https://github.com/jingkaimori/javaTutorial](https://github.com/jingkaimori/javaTutorial)
 
 ## 目录
 1. 开发环境
