@@ -80,6 +80,12 @@ mermaid: true
     3. Jackson 或 gson 以JSON格式转换对象
     4. Lombok 封装对象
     5. lwjgl 3D视频库
+10. 示例程序（暂缺）
+    1. 三角形面积计算（不真实）
+    1. 光线传播模拟
+    2. 类似excel的函数运算
+    4. 电路模拟器
+    5. 税收管理系统
 
 ## 学习顺序
 
@@ -157,3 +163,7 @@ flowchart LR
     autoClose --> customAutoClose
     class 1stprog,function,expression,datatype,ctrlflow,classObj,exception,generic,interface,functor,iterate important;
 </div>
+
+## 其他未尽事宜
+
+淘汰`Person``student`类型关系，改用有示例功能的代码。
