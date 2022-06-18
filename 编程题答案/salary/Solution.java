@@ -1,4 +1,4 @@
-
+package salary;
 public class Solution {
     public static void main(String args[]) {
       //给一个有普通收入、工资收入和享受国务院特殊津贴的小伙伴算税:
